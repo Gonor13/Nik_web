@@ -10,6 +10,7 @@ body {
 .hero {
   width: 100vw; /* ширина по всему экрану */
   height: 100vh; /* высота по всему экрану */
+  display: flex;
   margin: 0;
   padding: 0;
   justify-content: center;
