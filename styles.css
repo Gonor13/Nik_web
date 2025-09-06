@@ -3,7 +3,6 @@ body {
   color: #eaeaea;
   line-height: 1.6;
   overflow-x: hidden;
- padding: 0; /* убираем любые отступы по бокам */
   cursor: none; /* убираем стандартный курсор */
 }
 
