@@ -3,10 +3,117 @@ body {
   color: #eaeaea;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none; /* полностью убираем стандартный курсор */
+  cursor: none; /* убираем стандартный курсор */
 }
 
-/* Маленький центр курсора */
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #39ff14;
+  text-shadow: 0 0 15px rgba(57,255,20,0.7);
+}
+.hero h2 {
+  font-size: 1.5rem;
+  color: #ff00d4;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255,0,212,0.6);
+}
+.btn {
+  background: linear-gradient(135deg,#00f9ff,#ff00d4);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,249,255,0.7),0 0 30px rgba(255,0,212,0.6);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section.dark {
+  background: #141414;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.skills-list li {
+  background: #1f1c2c;
+  color: #00f9ff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(0,249,255,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skills-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,249,255,0.6);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.project-card {
+  background: linear-gradient(135deg,#232526,#414345);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(108,99,255,0.5),0 0 30px rgba(255,0,212,0.4);
+}
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.project-card h3 {
+  padding: 1rem;
+  color: #eaeaea;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0b0c10;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Custom cursor */
 .cursor {
   position: fixed;
   top: 0;
@@ -14,14 +121,12 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #555555; /* серый «асфальт» */
+  background: #555555;
   pointer-events: none;
   z-index: 9999;
   box-shadow: 0 0 10px #555, 0 0 25px rgba(85,85,85,0.5);
   transition: transform 0.15s ease, background 0.2s;
 }
-
-/* Пульсирующий ореол вокруг курсора */
 .cursor-follower {
   position: fixed;
   top: 0;
@@ -36,7 +141,6 @@ body {
   box-shadow: 0 0 20px rgba(85,85,85,0.4), 0 0 40px rgba(85,85,85,0.3);
   transition: width 0.2s, height 0.2s, background 0.2s;
 }
-
 .cursor-grow .cursor-follower {
   width: 80px;
   height: 80px;
