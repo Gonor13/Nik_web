@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function animate() {
-    posX += (mouseX - posX) * 0.15;
-    posY += (mouseY - posY) * 0.15;
+    posX += (mouseX - posX) * 0.2;
+    posY += (mouseY - posY) * 0.2;
     follower.style.transform = `translate(${posX - 25}px, ${posY - 25}px)`;
     requestAnimationFrame(animate);
   }
@@ -25,17 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mouseenter', () => follower.classList.add('cursor-grow'));
     el.addEventListener('mouseleave', () => follower.classList.remove('cursor-grow'));
   });
-
-  const sections = document.querySelectorAll('.section');
-  function checkSections() {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if(top < triggerBottom){
-        section.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', checkSections);
-  window.addEventListener('load', checkSections);
 });
+
