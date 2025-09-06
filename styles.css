@@ -17,5 +17,6 @@ body {background:#0b0c10;color:#eaeaea;line-height:1.6;overflow-x:hidden;}
 .project-card img {width:100%;height:150px;object-fit:cover;}
 .project-card h3 {padding:1rem;color:#eaeaea;}
 footer {text-align:center;padding:2rem;background:#0b0c10;color:#888;font-size:0.9rem;}
-.cursor {position:fixed;top:0;left:0;width:25px;height:25px;border-radius:50%;background:rgba(0,249,255,0.6);pointer-events:none;transform:translate(-50%,-50%);transition:transform 0.15s ease-out,width 0.2s,height 0.2s,background 0.2s;z-index:9999;box-shadow:0 0 15px rgba(0,249,255,0.8),0 0 30px rgba(255,0,212,0.6);}
-.cursor.grow {width:60px;height:60px;background:rgba(255,0,212,0.3);}
+.cursor {position:fixed;top:0;left:0;width:12px;height:12px;border-radius:50%;background:#555555;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform 0.15s ease,background 0.2s;box-shadow:0 0 8px #555555,0 0 20px rgba(85,85,85,0.5);}
+.cursor-follower {position:fixed;top:0;left:0;width:50px;height:50px;border-radius:50%;background:rgba(85,85,85,0.2);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s,background 0.2s;box-shadow:0 0 15px rgba(85,85,85,0.4),0 0 30px rgba(85,85,85,0.3);}
+.cursor-grow .cursor-follower {width:80px;height:80px;background:rgba(85,85,85,0.4);}
