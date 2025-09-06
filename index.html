@@ -1,156 +1,64 @@
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikita | Community Moderator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
 
-body {
-  background: #0b0c10;
-  color: #eaeaea;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  <header class="hero">
+    <div class="hero-content">
+      <h1>👋 Hi, I'm Nikita</h1>
+      <h2>Community Moderator | Web3 & NFT Enthusiast</h2>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </header>
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  text-align: center;
-}
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am an experienced Community Moderator with expertise in managing and supporting online communities across multiple projects and platforms. Skilled in enforcing community guidelines, resolving conflicts, and fostering positive engagement. I also have strong experience in NFT and cryptocurrency communities.</p>
+  </section>
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #39ff14;
-  text-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
-}
+  <section id="skills" class="section dark">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Community moderation & rule enforcement</li>
+      <li>Conflict resolution & escalation handling</li>
+      <li>User support & communication</li>
+      <li>Community policy development</li>
+      <li>NFT & cryptocurrency knowledge</li>
+      <li>Collaboration with project teams</li>
+    </ul>
+  </section>
 
-.hero h2 {
-  font-size: 1.5rem;
-  color: #ff00d4;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px rgba(255, 0, 212, 0.6);
-}
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card"><img src="img/project1.jpg" alt=""><h3>CryptoVerse DAO</h3></div>
+      <div class="project-card"><img src="img/project2.jpg" alt=""><h3>PixelNFT Club</h3></div>
+      <div class="project-card"><img src="img/project3.jpg" alt=""><h3>DeFiWorld</h3></div>
+      <div class="project-card"><img src="img/project4.jpg" alt=""><h3>MetaCommunity</h3></div>
+      <div class="project-card"><img src="img/project5.jpg" alt=""><h3>ChainHub</h3></div>
+      <div class="project-card"><img src="img/project6.jpg" alt=""><h3>FutureFi</h3></div>
+    </div>
+  </section>
 
-/* Buttons */
-.btn {
-  background: linear-gradient(135deg, #00f9ff, #ff00d4);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+  <section id="contact" class="section dark">
+    <h2>Contact</h2>
+    <p>📩 Email: <a href="mailto:nikitapetrenko13@gmail.com">nikitapetrenko13@gmail.com</a></p>
+    <p>💬 Telegram: <a href="https://t.me/gonor13">@gonor13</a></p>
+    <p>🐦 Twitter: <a href="https://twitter.com/Nikita_Sketch">@Nikita_Sketch</a></p>
+  </section>
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 249, 255, 0.7),
-              0 0 30px rgba(255, 0, 212, 0.6);
-}
+  <footer>
+    <p>© 2025 Nikita. All rights reserved.</p>
+  </footer>
 
-/* Sections */
-.section {
-  padding: 4rem 2rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section.dark {
-  background: #141414;
-}
-
-/* Skills */
-.skills-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.skills-list li {
-  background: #1f1c2c;
-  color: #00f9ff;
-  padding: 1rem;
-  border-radius: 10px;
-  text-shadow: 0 0 10px rgba(0, 249, 255, 0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skills-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 249, 255, 0.6);
-}
-
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.project-card {
-  background: linear-gradient(135deg, #232526, #414345);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(108, 99, 255, 0.5),
-              0 0 30px rgba(255, 0, 212, 0.4);
-}
-
-.project-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.project-card h3 {
-  padding: 1rem;
-  color: #eaeaea;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #0b0c10;
-  color: #888;
-  font-size: 0.9rem;
-}
-
-/* 🌟 Custom Cursor */
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: rgba(0, 249, 255, 0.6);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, width 0.2s, height 0.2s, background 0.2s;
-  z-index: 9999;
-  box-shadow: 0 0 15px rgba(0, 249, 255, 0.8),
-              0 0 30px rgba(255, 0, 212, 0.6);
-}
-
-.cursor.gro
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
