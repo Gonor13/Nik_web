@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mouseleave', () => follower.classList.remove('cursor-grow'));
   });
 
-  // Fade-in sections
   const sections = document.querySelectorAll('.section');
   function checkSections() {
     const triggerBottom = window.innerHeight * 0.85;
