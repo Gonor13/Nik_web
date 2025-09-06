@@ -1,64 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikita | Community Moderator</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Кастомный курсор -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
+body {
+  background: #0b0c10;
+  color: #eaeaea;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none; /* полностью убираем стандартный курсор */
+}
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>👋 Hi, I'm Nikita</h1>
-      <h2>Community Moderator | Web3 & NFT Enthusiast</h2>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </header>
+/* Маленький центр курсора */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #555555; /* серый «асфальт» */
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px #555, 0 0 25px rgba(85,85,85,0.5);
+  transition: transform 0.15s ease, background 0.2s;
+}
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am an experienced Community Moderator with expertise in managing and supporting online communities across multiple projects and platforms. Skilled in enforcing community guidelines, resolving conflicts, and fostering positive engagement. I also have strong experience in NFT and cryptocurrency communities.</p>
-  </section>
+/* Пульсирующий ореол вокруг курсора */
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(85,85,85,0.2);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(85,85,85,0.4), 0 0 40px rgba(85,85,85,0.3);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+}
 
-  <section id="skills" class="section dark">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Community moderation & rule enforcement</li>
-      <li>Conflict resolution & escalation handling</li>
-      <li>User support & communication</li>
-      <li>Community policy development</li>
-      <li>NFT & cryptocurrency knowledge</li>
-      <li>Collaboration with project teams</li>
-    </ul>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card"><img src="img/project1.jpg" alt=""><h3>CryptoVerse DAO</h3></div>
-      <div class="project-card"><img src="img/project2.jpg" alt=""><h3>PixelNFT Club</h3></div>
-      <div class="project-card"><img src="img/project3.jpg" alt=""><h3>DeFiWorld</h3></div>
-      <div class="project-card"><img src="img/project4.jpg" alt=""><h3>MetaCommunity</h3></div>
-      <div class="project-card"><img src="img/project5.jpg" alt=""><h3>ChainHub</h3></div>
-      <div class="project-card"><img src="img/project6.jpg" alt=""><h3>FutureFi</h3></div>
-    </div>
-  </section>
-
-  <section id="contact" class="section dark">
-    <h2>Contact</h2>
-    <p>📩 Email: <a href="mailto:nikitapetrenko13@gmail.com">nikitapetrenko13@gmail.com</a></p>
-    <p>💬 Telegram: <a href="https://t.me/gonor13">@gonor13</a></p>
-    <p>🐦 Twitter: <a href="https://twitter.com/Nikita_Sketch">@Nikita_Sketch</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Nikita. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+.cursor-grow .cursor-follower {
+  width: 80px;
+  height: 80px;
+  background: rgba(85,85,85,0.4);
+}
